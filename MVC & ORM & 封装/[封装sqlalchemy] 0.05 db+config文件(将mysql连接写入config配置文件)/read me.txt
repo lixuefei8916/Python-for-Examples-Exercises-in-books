@@ -1,0 +1,17 @@
+
+'''
+# from Python08.docx (no web view)
+# Learn to walk before you run.
+
+学习目的：简单的MVC及ORM实现，希望代码思路正确 (Model使用sqlalchemy / View 暂时print / Controller从model取值，传递给view打印)
+程序介绍：账户注册，insert用户名、密码和邮箱(假设用户输入的符合规范，更成熟功能后期完善)，
+          print出查询结果
+学习日期：2015.12.02
+
+修改记录
+【当前】registe_0.04 [拆分文件 db_operation.py ]
+registe_0.031[session应该封装在init中]
+registe_0.030[错误：session应该封装在init里-不应该在def session_keeping中]
+registe_0.02[增加view(print), 无web view]
+registe_0.01[无view,无select]
+'''
