@@ -1,5 +1,6 @@
 #-*- coding: utf-8 -*-
 # render_template渲染， 展示templates文件夹中的html模板
+
 from flask import Flask
 from flask import render_template
 
@@ -21,6 +22,17 @@ if __name__ == '__main__':
 
 1. 在view.py同目录下， 创建文件夹唉 templates
 2. vi hello.html 在 template【s】文件夹下    
+
+--  Jinja2 模板 --
+
+<!doctype html>
+<title>Hello from Flask</title>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello World!</h1>
+{% endif %}
+
 '''
 
 # ie 访问 http://192.168.58.128:5000/hello/
