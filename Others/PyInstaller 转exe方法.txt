@@ -1,0 +1,20 @@
+﻿
+Windows下,将一个py转为exe
+
+参考：http://blog.csdn.net/hmy1106/article/details/45151409
+
+
+1. 下载并解压 F:\pyinstaller-develop
+
+
+2. 安装，cmd下执行
+		cd F:\pyinstaller-develop
+		python setup.py install   [成功后最后一行返回 Finished]
+
+3. 转exe文件，cmd下执行
+		python PyInstaller.py  0lxf\lxfstudy-office.py
+
+4. exe文件默认位置
+		F:\pyinstaller-develop\lxfstudy-office\dist\xxx[文件名]
+
+
