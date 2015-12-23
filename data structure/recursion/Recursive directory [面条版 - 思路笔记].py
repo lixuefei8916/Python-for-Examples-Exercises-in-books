@@ -13,10 +13,10 @@ ftp = FTP() 									#绑定实例， ftp = FTP这个对象
 
 ftp_timeout = 30
 ftp_port = 21
-ftp_server = '192.168.99.20'
+ftp_server = '192.168.xx.xx'
 
 ftp.connect(ftp_server,ftp_port,ftp_timeout)	# 连接FTP
-ftp.login('lixuefei','lixuefei.com')			# 登录FTP
+ftp.login('xxxxx','xxxxxxx')			# 登录FTP
 
 # ----------------------------------------------------------
 #print ftp.getwelcome()							# 回显 FTP登录的欢迎信息
@@ -29,7 +29,7 @@ ftp_download_dir_name = 'SW_DVD5_Office_Professional_Plus_2013_64Bit_ChnSimp_MLF
 
 # ----------------------------------------------------------
 
-now_local_dir_list = r'c:\ops1905\ '	
+now_local_dir_list = r'c:\xxxxx\ '	
 #创建本地目录（用于下载的文件存放）	
 #os.mkdir(file_dir)
 #在本地创建该文件夹
