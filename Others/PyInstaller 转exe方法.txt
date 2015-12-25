@@ -1,5 +1,5 @@
 ﻿
-Windows下,将一个py转为exe
+Windows下,将一个py转为单个exe文件
 
 参考：http://blog.csdn.net/hmy1106/article/details/45151409
 
@@ -18,3 +18,6 @@ Windows下,将一个py转为exe
 		F:\pyinstaller-develop\lxfstudy-office\dist\xxx[文件名]
 
 
+5. -F 打成一个exe文件
+	F:\pyinstaller-develop>python pyinstaller.py -F 0lxf\Office2013_automatically_installed.py
+	-F 是打包成一个文件 ，如果不加参数-F，就会生成1个目录，里面N个文件
