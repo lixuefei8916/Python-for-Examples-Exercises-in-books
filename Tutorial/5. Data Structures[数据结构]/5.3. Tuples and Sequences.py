@@ -23,4 +23,11 @@ TypeError: 'tuple' object does not support item assignment
 ([1, 2, 3], [3, 2, 1])
 
 
-
+>>> empty = ()
+>>> singleton = 'hello',    # <-- note trailing comma
+>>> len(empty)
+0
+>>> len(singleton)
+1
+>>> singleton
+('hello',)
