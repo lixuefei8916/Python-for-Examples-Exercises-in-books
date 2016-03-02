@@ -31,3 +31,6 @@ TypeError: 'tuple' object does not support item assignment
 1
 >>> singleton
 ('hello',)
+
+
+>>> x, y, z = t
