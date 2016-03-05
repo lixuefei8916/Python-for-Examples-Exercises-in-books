@@ -5,7 +5,10 @@
 >>> fruit
 set(['orange', 'pear', 'apple', 'banana'])
 
-
+>>> 'orange' in fruit                 # fast membership testing
+True
+>>> 'crabgrass' in fruit
+False
 
 
 
