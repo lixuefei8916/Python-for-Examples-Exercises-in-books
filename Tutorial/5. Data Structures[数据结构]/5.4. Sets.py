@@ -10,6 +10,9 @@ True
 >>> 'crabgrass' in fruit
 False
 
-
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                  # unique letters in a
+set(['a', 'r', 'b', 'c', 'd'])
 
 
