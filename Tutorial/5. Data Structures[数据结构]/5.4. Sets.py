@@ -16,3 +16,6 @@ False
 set(['a', 'r', 'b', 'c', 'd'])
 
 
+>>> a - b                              # letters in a but not in b
+set(['r', 'd', 'b'])
+
