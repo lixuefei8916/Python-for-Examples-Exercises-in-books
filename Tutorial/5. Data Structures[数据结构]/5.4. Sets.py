@@ -25,3 +25,12 @@ set(['a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'])
 >>> a & b
 set(['a', 'c'])
 
+>>> a ^ b                              # letters in a or b but not both
+set(['r', 'd', 'b', 'm', 'z', 'l'])
+
+
+和列表推导式类似，集合也支持推导式：
+>>> a = {x for x in 'abracadabra' if x not in 'abc'}
+>>> a
+set(['r', 'd'])
+
