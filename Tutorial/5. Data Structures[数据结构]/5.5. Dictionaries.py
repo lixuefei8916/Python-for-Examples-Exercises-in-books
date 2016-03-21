@@ -16,4 +16,9 @@
 >>> tel
 {'guido': 4127, 'irv': 4127, 'jack': 4098}
 
+
+>>> tel.keys()
+['guido', 'irv', 'jack']
+
+
 5.5. 字典
