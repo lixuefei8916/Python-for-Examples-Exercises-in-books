@@ -21,4 +21,8 @@
 ['guido', 'irv', 'jack']
 
 
+>>> 'guido' in tel
+True
+
+
 5.5. 字典
