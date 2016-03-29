@@ -15,4 +15,28 @@
   
   mv //usr/local/python2.7/bin/python2.7 /usr/bin/python
 
+
+2. setuptools 安装
+  python setup.py install
+  
+3. pip 安装
+  python setup.py install
+
+4. Django安装
+  pip install django
+  
+5. 验证 or 查看版本
+  >>> import django
+  >>> print(django.get_version())
+  1.8
+  
 '''
+
+
+
+
+
+
+
+
+
