@@ -1,0 +1,18 @@
+# Django 1.8.2 文档
+# http://python.usyiyi.cn/django_182/index.html
+
+# -------------------------------------------------------------
+# 一、安装
+'''
+1. python2.7 （Linux自带2.6的操作）
+  下载 https://www.python.org/downloads/source/
+  
+  
+  查找python命令目录
+  whereis python
+  mv /usr/bin/python /usr/bin/python2.6_bak
+  
+  
+  
+
+'''
