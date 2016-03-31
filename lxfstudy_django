@@ -271,7 +271,7 @@
                任意地为每个字段集指定HTML样式类。
                
                
-6.  添加关联对象
+6.  添加关联对象 （ 字段 ）
     1） Choice管理（同question那样做）
         vim polls/admin.py
           from .models import Choice, Question
@@ -305,8 +305,60 @@
             class ChoiceInline(admin.TabularInline):
               .... 原内容不变
         
+ 7.  自定义管理界面中的变更列表
+     “变更列表”界面 —— 该界面显示系统中所有的Question。
+     需求 ： 能显示每个字段
+     
+     1） 实现 ： 用list_display 选项来实现这个功能，它是一个要显示的字段名称的元组，在对象的变更列表页面上作为列显示：
+         vim polls/admin.py
+            # ... 原内容保持不变
+            list_display = ('question_text', 'pub_date')
+     2） was_published_recently 添加进来
+         vim polls/admin.py         
+            class QuestionAdmin(admin.ModelAdmin):
+                # ... 原内容不变
+                list_display = ('question_text', 'pub_date')
+ 
+ 8. 自定义项目的模板
+    1） 创建一个 tmplates目录
+        cd /data/django/mysite
+        mkdir templates
+        
+    2)  mysite/settings.py 在TEMPLATES 设置中添加一个DIRS 选项 : 'DIRS': [os.path.join(BASE_DIR,'templates')],
+        cd /data/django/mysite/mysite
+        vim mysite/settings.py
+          TEMPLATES = [
+              {
+                  'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                  'DIRS': [os.path.join(BASE_DIR, 'templates')],    ##### 这1行是修改的内容 #####
+                  'APP_DIRS': True,
+                  'OPTIONS': {
+                      'context_processors': [
+                          'django.template.context_processors.debug',
+                          'django.template.context_processors.request',
+                          'django.contrib.auth.context_processors.auth',
+                          'django.contrib.messages.context_processors.messages',
+                      ],
+                  },
+              },
+          ]
+ 
+    3） 创建 tmplates/admin 目录
+        cd /data/django/mysite/templates
+        mkdir admin
+        
+        然后从Django源码中管理站点的模板目录（django/contrib/admin/templates）将admin/base_site.html拷贝到这个目录中
+        cd /data/Django/django/contrib/admin/templates/admin
+        cp base_site.html /data/django/mysite/templates/
         
 '''
+
+# -----------------------------------------------------------------------------------------------
+# 入门 - 第3部分：视图和模板
+
+
+
+
 
 
 
