@@ -48,7 +48,7 @@
     这将会在你的当前目录下生成一个 mysite目录
   
 2. 数据库的建立 (mysql)
-  默认情况下，该配置使用SQLite，但本次学习中，lxf改用mysql；
+    默认情况下，该配置使用SQLite，但本次学习中，lxf改用mysql；
   
   1) mysql操作
      mysql安装
@@ -58,22 +58,27 @@
      Python MySQLdb安装:pip install MySQL-python
   
   2） vim settings.py 设置 sql 配置
-    cd /data/django/mysite
-    vim settings.pyc
-      DATABASES = DATABASES = {
-        'default': {
-          'ENGINE': 'django.db.backends.mysql',
-          'NAME' : 'django_test',  #mysql数据库名
-          'USER' : 'root',         #mysql用户名
-          'PASSWORD':'mysql密码',
-          'HOST':'127.0.0.1',
-          'PORT':'3306',
-         }
-      }
+      cd /data/django/mysite
+      vim settings.pyc
+        DATABASES = DATABASES = {
+          'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME' : 'django_test',  #mysql数据库名
+            'USER' : 'root',         #mysql用户名
+            'PASSWORD':'mysql密码',
+            'HOST':'127.0.0.1',
+            'PORT':'3306',
+           }
+        }
       
   3) django创建数据库
      python manage.py migrate
      
+3. 运行 runserver
+    cd /data/django/mysite
+    python manage.py runserver 0.0.0.0:8888
+     
+    此时IE访问http://192.168.97.39:8000/， 显示It Works。
 '''
 
 
