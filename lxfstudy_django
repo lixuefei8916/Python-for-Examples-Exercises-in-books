@@ -356,7 +356,48 @@
 # -----------------------------------------------------------------------------------------------
 # 入门 - 第3部分：视图和模板
 
+'''
+1.  理念
+    如何创建一个对外的界面
+    例如博客：
+      博客首页 —— 显示最新发表的博客。
+      博客“详细”页面 —— 单篇博客的固定链接页面。
+      基于年份的归档页面 —— 显示某给定年份里所有月份发表过的博客。
+      基于月份的归档页面 —— 显示在给定月份中发表过博客的所有日期。
+      基于日期的归档页面 —— 显示在给定日期中发表过的所有博客名称。
+      评论功能 —— 为一篇给定博客发表评论。
 
+
+2.  第1个视图 （视图中的 Hello World）
+    cd /data/django/mysite/polls/
+    
+    1)  vim views.py
+          from django.http import HttpResponse
+    
+          def index(request):
+              return HttpResponse("Hello, world. You're at the polls index.")
+    2)  vim polls/urls.py
+          from django.conf.urls import url
+          from . import views
+          
+          urlpatterns = [
+              url(r'^$', views.index, name='index'),
+          ]
+    
+    3)  让主URLconf可以链接到polls.urls模块。在mysite/urls.py中插入一个include()：
+        cd /data/django/mysite/mysite
+        vim mysite/urls.py
+          from django.conf.urls import include, url     ### 加了一个 include
+          from django.contrib import admin
+          
+          urlpatterns = [
+              url(r'^polls/', include('polls.urls')),
+              url(r'^admin/', include(admin.site.urls)),    ### 加
+          ]
+  
+    
+
+'''
 
 
 
