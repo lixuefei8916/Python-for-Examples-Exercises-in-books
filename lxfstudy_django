@@ -79,10 +79,58 @@
     python manage.py runserver 0.0.0.0:8888
      
     此时IE访问http://192.168.97.39:8000/， 显示It Works。
+
+
+4. 创建模型
+    在的manage.py文件同级目录创建我们的投票应用，以便可以将它作为顶层模块导入，而不是mysite的子模块。
+    
+    1） 创建应用polls（投票系统）
+        cd /data/django/mysite
+        python manage.py startapp polls
+    
+       此时生成文件夹 polls
+       
+    2)  编辑 models.py
+        cd /data/django/mysite/polls
+        
+        vim models.py
+            from django.db import models
+            class Question(models.Model):
+                question_text = models.CharField(max_length=200)      # question_test字段名，CharField类型
+                pub_date = models.DateTimeField('date published')     # pub_date字段名， DateTimeField类型
+            class Choice(models.Model):
+                question = models.ForeignKey(Question)
+                choice_text = models.CharField(max_length=200)
+                votes = models.IntegerField(default=0)
+
+5.  激活模型
+    1） vim mysite/settings.py 修改INSTALLED_APPS设置以包含字符串'polls'
+        cd /data/django/mysite/mysite
+        vim settings.py
+          INSTALLED_APPS = (
+              'django.contrib.admin',
+              'django.contrib.auth',
+              'django.contrib.contenttypes',
+              'django.contrib.sessions',
+              'django.contrib.messages',
+              'django.contrib.staticfiles',
+              'polls',  ######增加polls应用#####
+          )
+          
+    2） 让 django知道要现在要包含polls应用
+        cd /data/django/mysite/
+        python manage.py makemigrations polls
+        
+        sqlmigrate命令接收迁移文件的名字并返回它们的SQL语句
+        python manage.py sqlmigrate polls 0001
+        
+    3） 再次运行migrate以在你的数据库中创建模型所对应的表
+        python manage.py migrate
+
+
+6. 玩转API
+    
 '''
-
-
-
 
 
 
