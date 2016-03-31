@@ -36,24 +36,26 @@
 # 入门 - 第1部分 - 模型
 '''
 目标：基本的投票应用。
-它包含两部分：
-一个对外的网站，可以让人们查看投票的结果并让他们进行投票。
-一个管理网站，可让你添加、修改和删除选票。
+    它包含两部分：
+    一个对外的网站，可以让人们查看投票的结果并让他们进行投票。
+    一个管理网站，可让你添加、修改和删除选票。
 
 
 
 1. 创建一个项目
-  cd /data/django
-  django-admin.py startproject mysite
-  这将会在你的当前目录下生成一个 mysite目录
+    cd /data/django
+    django-admin.py startproject mysite
+    这将会在你的当前目录下生成一个 mysite目录
   
 2. 数据库的建立 (mysql)
-  默认情况下，该配置使用SQLite
+  默认情况下，该配置使用SQLite，但本次学习中，lxf改用mysql；
   
   1) mysql操作
      mysql安装
      mysql帐号
      创建库：create database django_test;
+     
+     Python MySQLdb安装:pip install MySQL-python
   
   2） vim settings.py 设置 sql 配置
     cd /data/django/mysite
@@ -68,7 +70,10 @@
           'PORT':'3306',
          }
       }
-  python manage.py migrate
+      
+  3) django创建数据库
+     python manage.py migrate
+     
 '''
 
 
