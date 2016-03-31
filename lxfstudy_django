@@ -235,14 +235,77 @@
 # 入门 - 第2部分 - 管理站点
 
 '''
+1.  创建一个管理员用户(能够登录管理站点的用户)
+    1）创建
+        python manage.py createsuperuser
+        Username: admin
+        Email address: admin@example.com
+        Password: lixuefei
+    2） 运行 runserver
+        python manage.py runserver
+    
+    
+2.  管理站点(不可管理 polls)
+        此时ie访问 http://127.0.0.1:8000/admin/ ，需要输入 admin lixuefei 登录。
+        你将看到几类可编辑的内容：groups和users。 它们是由django.contrib.auth提供的，这个认证框架集成在Django中。
 
+3.  让 poll 应用，在管理站点中可编辑
+    cd /data/django/mysite/polls
+    vim polls/admin.py
+        from django.contrib import admin
+        from .models import Question
+        admin.site.register(Question)
+        
+4. 管理站点(可管理 polls)
+    ie访问 http://127.0.0.1:8000/admin/ ，需要输入 admin lixuefei 登录。
+    此时可以管理 polls应用 ， Question
 
-
-
-
-
-
-
+5. 管理表单（自定义）
+    cd /data/django/mysite/polls
+    vim polls/admin.py 
+      ..... 原内容保留
+      class QuestionAdmin(admin.ModelAdmin):
+        fields = ['pub_date', 'question_text']
+        
+    以及还可以 fieldsets中每个元组的第一个元素是字段集的标题。以下是我们的对象表单现在的样子：
+               任意地为每个字段集指定HTML样式类。
+               
+               
+6.  添加关联对象
+    1） Choice管理（同question那样做）
+        vim polls/admin.py
+          from .models import Choice, Question
+          .... 原内容保留
+          admin.site.register(Choice)
+          
+    2） 让 Choice变得完善 ( 仅提供3个选项空间 )
+        在创建Question对象的同时可以直接添加一组Choice将会更好。让我们实现这个功能。
+        移除对Choice模型的register()调用。然后将Question的注册代码编辑为：
+        vim polls/admin.py
+            from django.contrib import admin
+            from .models import Choice, Question
+            
+            class ChoiceInline(admin.StackedInline):
+                model = Choice
+                extra = 3
+            
+            class QuestionAdmin(admin.ModelAdmin):
+                fieldsets = [
+                    (None,               {'fields': ['question_text']}),
+                    ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+                ]
+                inlines = [ChoiceInline]
+            
+            admin.site.register(Question, QuestionAdmin)
+            
+    3） ChoiceInline 的声明 （ 解决 Choice 对象的字段占用大量的屏幕空间 ）
+        使用 TabularInline（不是StackedInline），这些相关联的对象显示成紧凑的、基于表格的形式
+        
+        vim polls/admin.py
+            class ChoiceInline(admin.TabularInline):
+              .... 原内容不变
+        
+        
 '''
 
 
