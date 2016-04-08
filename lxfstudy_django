@@ -394,6 +394,8 @@
               url(r'^polls/', include('polls.urls')),
               url(r'^admin/', include(admin.site.urls)),    ### 加
           ]
+          
+    4) 在你的浏览器中浏览 http://localhost:8000/polls/ , 你会看到 “Hello, world. You’re at the polls index.”
   
     
 ---
