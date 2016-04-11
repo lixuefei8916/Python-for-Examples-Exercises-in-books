@@ -446,15 +446,44 @@
     
     
 4.  实际功能的视图
-  1) index()视图
+  1) index()视图 - 它显示系统中最新发布的5条questions记录，并用逗号分割；
       vim polls/views.py
         from django.http import HttpResponse
         from .models import Question
-        
+
         def index(request):
             latest_question_list = Question.objects.order_by('-pub_date')[:5]
             output = ', '.join([p.question_text for p in latest_question_list])
             return HttpResponse(output)
+        【其他不变】
+  
+  2) templates目录 （自定义模板，将页面的设计从Python中分离出来）
+      1.  在你的polls目录下创建一个叫做 templates的目录。Django将在这里查找模板。
+      2.  polls/templates/polls/index.html
+          vim polls/templates/polls/index.html
+            {% if latest_question_list %}
+                <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No polls are available.</p>
+            {% endif %}
+      3.  更新polls/views.py中的index视图来使用模板：
+          vim polls/views.py
+            from django.http import HttpResponse
+            from django.template import RequestContext, loader
+            from .models import Question
+            
+            def index(request):
+                latest_question_list = Question.objects.order_by('-pub_date')[:5]
+                template = loader.get_template('polls/index.html')
+                context = RequestContext(request, {
+                    'latest_question_list': latest_question_list,
+                })
+                return HttpResponse(template.render(context))
+            [以上的代码载入polls/index.html模板，并传给它一个context。Context是一个字典，将模板变量的名字映射到Python 对象。]
   
   
 ---
