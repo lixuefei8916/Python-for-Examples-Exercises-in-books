@@ -397,7 +397,66 @@
           
     4) 在你的浏览器中浏览 http://localhost:8000/polls/ , 你会看到 “Hello, world. You’re at the polls index.”
   
+  
+  
+3.  编写更多的试图
+  1) polls/views.py
+      cd /data/django/mysite/polls
+      
+      vi polls/views.py [追加以下内容]
+        def detail(request, question_id):
+            return HttpResponse("You're looking at question %s." % question_id)
+        
+        def results(request, question_id):
+            response = "You're looking at the results of question %s."
+            return HttpResponse(response % question_id)
+        
+        def vote(request, question_id):
+            return HttpResponse("You're voting on question %s." % question_id)
+      
+      
+      vi polls/urls.py
+        from django.conf.urls import url
+        from . import views
+        
+        urlpatterns = [
+            # ex: /polls/
+            url(r'^$', views.index, name='index'),    【r'^$' == 开头既是结尾】
+            # ex: /polls/5/
+            url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
+            # ex: /polls/5/results/
+            url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
+            # ex: /polls/5/vote/
+            url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+        ]
+      
+  2) 效果
+    访问 http://192.168.97.39:8000/polls
+    返回“Hello, world. You're at the polls index. 11111”
     
+    访问 http://192.168.97.39:8000/polls/8916/
+    返回 You're looking at question 8916.
+    
+    http://192.168.97.39:8000/polls/8916/results/
+    返回  You're looking at the results of question 8916.
+    
+    http://192.168.97.39:8000/polls/8916/vote/
+    返回  You're voting on question 8916.
+    
+    
+    
+4.  实际功能的视图
+  1) index()视图
+      vim polls/views.py
+        from django.http import HttpResponse
+        from .models import Question
+        
+        def index(request):
+            latest_question_list = Question.objects.order_by('-pub_date')[:5]
+            output = ', '.join([p.question_text for p in latest_question_list])
+            return HttpResponse(output)
+  
+  
 ---
 '''
 
