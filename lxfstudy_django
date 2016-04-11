@@ -486,6 +486,36 @@
             [以上的代码载入polls/index.html模板，并传给它一个context。Context是一个字典，将模板变量的名字映射到Python 对象。]
   
   
+5.  快捷方式：render()
+  1) index()视图 - 
+    vim polls/views.py
+      from django.shortcuts import render
+      from .models import Question
+      
+      def index(request):
+          latest_question_list = Question.objects.order_by('-pub_date')[:5]
+          context = {'latest_question_list': latest_question_list}
+          return render(request, 'polls/index.html', context)
+
+6.  引发一个404错误 - 处理Question 详细页面的视图 —— 显示Question内容的页面：
+    目的：如果没有找到所请求ID的Question，这个视图引发一个Http404异常。
+    1） vim polls/views.py
+          from django.http import Http404
+          from django.shortcuts import render
+          
+          from .models import Question
+          # ...
+          def detail(request, question_id):
+              try:
+                  question = Question.objects.get(pk=question_id)
+              except Question.DoesNotExist:
+                  raise Http404("Question does not exist")
+              return render(request, 'polls/detail.html', {'question': question})
+
+    2） vim polls/templates/polls/detail.html
+          {{ question }}
+
+
 ---
 '''
 
