@@ -527,7 +527,17 @@
           question = get_object_or_404(Question, pk=question_id)
           return render(request, 'polls/detail.html', {'question': question})
 
-
+8.  使用模板
+    投票应用的detail()视图。 根据context 变量question，下面是polls/detail.html模板可能的样子：
+    vi polls/templates/polls/detail.html
+        <h1>{{ question.question_text }}</h1>
+        <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }}</li>
+        {% endfor %}
+        </ul>
+    
+    
 
 ---
 '''
