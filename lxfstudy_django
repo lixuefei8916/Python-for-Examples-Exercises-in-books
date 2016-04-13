@@ -515,6 +515,19 @@
     2） vim polls/templates/polls/detail.html
           {{ question }}
 
+7.  快捷方式：get_object_or_404
+    一种习惯方式：使用get（），并且在对象不存在时引发Http404.Django为此提供一个快捷方式
+    下面是重写后的detail()
+    vim polls/views.py
+      from django.shortcuts import get_object_or_404, render
+      
+      from .models import Question
+      # ...其他内容一致；
+      def detail(request, question_id):
+          question = get_object_or_404(Question, pk=question_id)
+          return render(request, 'polls/detail.html', {'question': question})
+
+
 
 ---
 '''
