@@ -11,6 +11,34 @@
 还好，有标准库来解决
 '''
 
+KEY 键
+Value 值
+函数和作用:
+CloseKey() – 关闭一个Key
+ConnectRegistry() – 链接到其他机器的注册表
+CreateKey() – 创建一个Key
+DeleteKey() – 删除一个Key
+DeleteValue() – 删除一个Key里面的值（value）
+EnumKey() – 为已经打开的Key里面的子键建立索引
+EnumValue() – 为打开的键中的值建立索引
+FlushKey() – 回写所有的键属性改变到注册表
+LoadKey() – 从指定文件读入键信息
+OpenKey() – 打开一个键
+OpenKeyEx()
+QueryValue() – 在注册表中检索一个键的路径
+QueryValueEx() – 注册表中检索一个键的路径
+QueryInfoKey() – 返回关于键的信息
+SaveKey() – 保存键到文件
+SetValue() – 设置一个键
+SetValueEx() – 设置一个值
+FAQ:
+python操作注册表出现“WindowsError: (5, ”)”
+其实解决的办法很简单，通过阅读文档发现，问题在于
+_winreg.OpenKey()中的sam参数
+sam参数用来定义key的存取类型
+查询的设置成READ 写入的设置成WRITE就不会出现WINDOWS 5的错误了
+
+
 
 #=====================================================================================
 #[读取键值]
