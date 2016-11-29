@@ -35,5 +35,12 @@ calc1([1,2,3])
 #nums = [1,2,3]
 #calc(*nums)
 
+def person(name,age,**kw):
+	return 'name',name,'age',age,'other',kw
+person('Win7',30)
+person('Win10',45,gender='M',job='Engineer')
 
+def func(a,b,c=0,*args,**kw):
+	return 'a=',a, 'b=', b, 'c=',c, 'args = ',args, 'kw=',kw
+func(1,2,3,'a','b',x=99)
 
