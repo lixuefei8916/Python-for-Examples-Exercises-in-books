@@ -93,3 +93,37 @@ print ("hh/mm/ss %s:%s:%s" % (i.hour, i.minute, i.second) )
 import time
 print (time.strftime("%H:%M:%S"))
 print (time.strftime("%d/%m/%Y"))
+
+
+
+import datetime
+#获得当前时间
+now = datetime.datetime.now() # ->这是时间数组格式
+print now
+#转换为指定的格式:
+otherStyleTime = now.strftime("%Y-%m-%d %H:%M:%S")
+print otherStyleTime
+print now.strftime("%Y-%m-%d")
+
+a = "2013-10-10 23:40:00"
+timeArray = time.strptime(a, "%Y-%m-%d %H:%M:%S")
+otherStyleTime = time.strftime("%Y/%m/%d %H:%M:%S", timeArray)
+otherStyleTime
+
+# 三天前的时间
+threeDayAgo = (datetime.datetime.now() - datetime.timedelta(days = 3))
+# 昨天的时间
+yesterday = (datetime.datetime.now() - datetime.timedelta(days=1))
+# 明天
+yesterday = (datetime.datetime.now() + datetime.timedelta(days=1))
+print ("%s/%s/%s" % (yesterday.year, yesterday.month, yesterday.day) )
+
+
+
+
+
+
+
+
+
+
