@@ -20,5 +20,12 @@ def power1(x,n=2):
 power1(5)
 
 
+def calc1(numbers):
+	sum = 0
+	for n in numbers:
+		sum = sum + n * n
+	return sum
+calc1([1,2,3])
+
 
 
