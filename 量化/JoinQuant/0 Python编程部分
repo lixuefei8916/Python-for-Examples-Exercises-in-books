@@ -27,5 +27,13 @@ def calc1(numbers):
 	return sum
 calc1([1,2,3])
 
+#def calc(*numbers):
+#	sum = ()
+#	for n in numbers:
+#		sum = sum + n * n
+#	return sum
+#nums = [1,2,3]
+#calc(*nums)
+
 
 
