@@ -58,5 +58,16 @@ end = time.clock()
 #print "read: %f s" % (end - start)
 
 
+def intersect(s1,s2):
+    return [x for x in s1 if x in s2]
+intersect([1,2,3],(1,4))
+
+def fib(num):
+    result=[0,1]
+    for i in range(num-2):
+        result.append(result[-2]+result[-1])
+    return result
+fib(15)
+#[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
 
 
