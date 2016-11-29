@@ -44,3 +44,19 @@ def func(a,b,c=0,*args,**kw):
 	return 'a=',a, 'b=', b, 'c=',c, 'args = ',args, 'kw=',kw
 func(1,2,3,'a','b',x=99)
 
+
+x=88
+def func():
+	global x
+	x = 99
+
+import time
+start = time.clock()
+fib=lambda n,x=0,y=1:x if not n else fib(n-1,y,x+y)
+#print fib(20)
+end = time.clock()
+#print "read: %f s" % (end - start)
+
+
+
+
