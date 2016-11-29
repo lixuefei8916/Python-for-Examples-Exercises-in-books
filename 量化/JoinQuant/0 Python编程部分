@@ -6,3 +6,13 @@ def my_abs(x):
 	else:
 		return -x
 my_abs(100)
+
+def power(x):
+	return x*x
+power(5)
+
+
+
+
+
+
