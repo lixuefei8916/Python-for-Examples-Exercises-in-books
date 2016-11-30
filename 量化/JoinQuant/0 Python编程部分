@@ -162,6 +162,10 @@ for i in range(4):
 print transposed
 
 
+#
+# Day 2  Numpy库
+#
+
 
 
 
