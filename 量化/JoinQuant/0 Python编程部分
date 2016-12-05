@@ -161,11 +161,11 @@ for i in range(4):
     transposed.append([row[i] for row in matrix])
 print transposed
 
-
-#
+# 
 # Day 2  Numpy库
-#
-
+# 同种元素的多维数组
+# 注意1：	([]) ,小括号中+中括号
+from numpy import *
 
 
 
