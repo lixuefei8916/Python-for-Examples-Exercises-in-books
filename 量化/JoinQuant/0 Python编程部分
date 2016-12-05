@@ -167,6 +167,31 @@ print transposed
 # 注意1：	([]) ,小括号中+中括号
 from numpy import *
 
+a = arange(15).reshape(3,5)
+a.shape
+
+# 必须 ([]),小括号中+中括号
+a = array([2,3,4])
+type(a)
+a.dtype 	#int
+b = array([1.2,3.5,5.1])
+b.dtype 	#float64
+
+# 二位数组 ([ (),() ])
+array([(1,5,2,3),(4,5,6)])
+
+# 预设 1 个 3行4列 的数组，用zero填满
+zeros((3,4))
+
+# 预设 [2] 个 3行4列 的数组，用one填满
+ones((2,3,4))
+
+empty((2,3))
+
+arange(10,30,5)
+#array([10, 15, 20, 25])
+
+
 
 
 
