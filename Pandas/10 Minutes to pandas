@@ -1,0 +1,16 @@
+#
+# pandas库之数据查看、选择
+# 《10 Minutes to pandas》
+#
+
+# Series：		一维数组
+# DataFrame：	二维的表格型数据结构
+# Panel ：		三维的数组
+import pandas as pd
+import numpy as np #注意，有的教程里没写这个库，导致后面跟不上
+#import matplotlib.ayplot as plt
+
+
+
+
+
