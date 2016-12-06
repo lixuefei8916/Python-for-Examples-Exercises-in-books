@@ -11,6 +11,15 @@ import numpy as np #注意，有的教程里没写这个库，导致后面跟不
 #import matplotlib.ayplot as plt
 
 
+# 创建对象
+# Series：		一维数组
+s = pd.Series([1,3,5,np.nan,6,8])
+s.index
+# 用时间索引：	创建二维的表格型数据结构
+dates = pd.date_range('20161101',periods=6)
+df = pd.DataFrame(np.random.randn(6,4),index=dates,columns=list('ABCD'))
+# (6,4)对应6行4列， 6行对应dates的6天日期， 4列对应A列，B列，C列，D列
+
 
 
 
