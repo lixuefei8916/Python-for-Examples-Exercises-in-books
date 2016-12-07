@@ -59,6 +59,7 @@ df.iloc[1,1]  #第2行第2列的 值
 df[df.A > 0] 	#打印 A列中大于0的
 df[df >0]  # 所有大于0的，未匹配条件的用 NaN表示
 
+#布尔索引
 df2 = df.copy()		#df2 = df（复制一个）
 df2['E']=['one','one','two','three','four','three']   #加一列 E
 df2[df2['E'].isin(['two','four'])]
