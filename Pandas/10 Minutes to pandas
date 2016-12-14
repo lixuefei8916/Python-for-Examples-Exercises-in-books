@@ -94,5 +94,17 @@ s.value_counts()
 s = pd.Series(['A','B','C','Aaba','Baca',np.nan,'CABA','dog','cat'])
 s.str.lower()
 
+#合并
+df = pd.DataFrame(np.random.randn(10,4))
+cf = pd.DataFrame(np.random.randn(10,4))
+# 是随机得数，所以df 和 cf的数值是不一样的；
+pieces = [df[:3],df[3:7],df[7:]]
+print pd.concat(pieces)
+
+
+
+
+
+
 
 
