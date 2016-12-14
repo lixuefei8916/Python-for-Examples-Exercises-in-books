@@ -86,5 +86,7 @@ df.mean()
 s = pd.Series([1,3,5,np.nan,6,8],index=dates).shift(2)
 s = df.sub(s,axis='index')
 
-
+df.apply(np.cumsum)
+df.apply(lambda x: x.max() - x.min())
+s = pd.Series(np.random.randint(0,7,size=10))
 
