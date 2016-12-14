@@ -85,7 +85,6 @@ pd.isnull(df1)		# 不二填充， NaN的地方True， 其他有数值的False
 df.mean()
 s = pd.Series([1,3,5,np.nan,6,8],index=dates).shift(2)
 s = df.sub(s,axis='index')
-print s
 
 
 
