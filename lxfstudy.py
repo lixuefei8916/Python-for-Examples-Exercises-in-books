@@ -1522,6 +1522,15 @@ def getfactors(number):
 print getfactors(10)
 
 
+# 排列组合  -- 多个list
+import itertools
+list1 = ['a','b','c','d','e','f','e','g','h','i','j','k']
+list2 = ['apple','pear']
+list3 = ['cat','moto']
+list_final = (list(itertools.product(list1,list2,list3)))
+#结果不好： a1,a2,a3,......,c2,c3 ; 不能 a123, abc123;
+#而且，当原始list>3时，就变为  (a,apple,cat),不能(a,apple)
+
 
 
 
