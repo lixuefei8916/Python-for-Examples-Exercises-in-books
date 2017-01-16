@@ -1485,7 +1485,7 @@ i.execute(name='Mary', age=30, password='secret')
 i.execute({'name': 'lxf2', 'age': 42},
          {'name': 'lxf3', 'age': 57},
         {'name': 'lxf4', 'age': 33})
-
+'''
 s = users.select()
 rs = s.execute()
 row = rs.fetchone()
@@ -1506,6 +1506,20 @@ def getfactors(number): 					#假设 number=10
     return factorList 
 
 
+
+def getfactors(number): 
+    fList = [1,number] 						#假设 number=10
+    for i in range(1,number + 1): 			# for i in range(1,11) 即,i = 1,2,3,4,5,6,7,8,9,10
+        if number % 2 == 0: 				# 第1次循环中 number =10   10除以2==0，那么 fList=[1,10,] , 然后 10/2 = 5
+            fList.append(2) 				# 第2次循环中 number =5   5除以2不=0，那么 fList列表中加5
+            number = number / 2 			# 一共循环  number=10 次循环
+        else: 
+            fList.append(number) 
+            break 
+    return fList 
+
+
+print getfactors(10)
 
 
 
