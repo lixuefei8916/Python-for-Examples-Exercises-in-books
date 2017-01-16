@@ -1498,8 +1498,12 @@ print 'Password:', row[users.c.password]
 for row in rs:
         print row.name, 'is', row.age, 'years old'
 
-
-'''
+def getfactors(number): 					#假设 number=10
+    factorList = [] 
+    for i in range(1, number + 1): 			# for i in range(1,11) 即,i = 1,2,3,4,5,6,7,8,9,10
+        if number % i == 0:  # 10 分别除以 （1-10）找出能够整出的数（1，2，5） and 去掉非素数1
+            factorList.append(i) 			# factorList = [2，5]
+    return factorList 
 
 
 
