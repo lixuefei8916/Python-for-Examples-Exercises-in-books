@@ -29,6 +29,12 @@ list21 = ['zzz','aaaa','…']
 
 
 
+ # 原始数据 将所有 list 加入list_all1中  
+list_all1 = list2+list3
+list_all2 = []                  # itertools函数，变成len(list1)个数量个list
+list_final = []                  # 把所有list拆开，统一放进一个list中
+
+
 
 
 
