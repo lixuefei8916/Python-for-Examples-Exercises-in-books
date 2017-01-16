@@ -27,13 +27,15 @@ list19 = ['ppp','qqq','rrr','sss','ttt']
 list20 = ['uuu','vvv','www','xxx','yyy']
 list21 = ['zzz','aaaa','…']
 
-
-
  # 原始数据 将所有 list 加入list_all1中  
 list_all1 = list2+list3
 list_all2 = []                  # itertools函数，变成len(list1)个数量个list
 list_final = []                  # 把所有list拆开，统一放进一个list中
 
+
+for i in range(1,len(list_all1)+1):
+    iter = itertools.permutations(list_all1,2)  #最后的3， 代表每次从'abcd'中挑选两个元素，比如ab, bc, ...
+    list_all2.append(list(iter))
 
 
 
