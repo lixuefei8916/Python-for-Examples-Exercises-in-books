@@ -1,2 +1,36 @@
 
 #列表解析
+
+
+# 排列组合  -- N个list 加进1个list，每次组合3个元素 【会内存不足】
+import time  #由于排列组合太多，所以需要暂停几秒，释放内存
+import itertools
+list1 = ['a','b','c','d','e','f','e']
+list2 = ['apple','pear']
+list3 = ['cat','moto']
+list4 = ['g','h','i','j','k']
+list5 = ['1','2','3','4','5']
+list6 = ['aa','bb','cc','dd','ee','ff','ee']
+list7 = ['qq','xx']
+list8 = ['ww','ee']
+list9 = ['zz','xx','cc','vv','bb']
+list10 = ['**','((','))','mm','nn']
+list11 = ['gg','hh','ii','jj','kk','ll','mm']
+list12 = ['nn','oo']
+list13 = ['pp','qq']
+list14 = ['rr','ss','tt','uu','vv']
+list15 = ['zz','aaa','bbb','ccc','ddd']
+list16 = ['eee','fff','ggg','hhh','iii','jjj','kkk']
+list17 = ['lll','mmm']
+list18 = ['nnn','ooo']
+list19 = ['ppp','qqq','rrr','sss','ttt']
+list20 = ['uuu','vvv','www','xxx','yyy']
+list21 = ['zzz','aaaa','…']
+
+
+
+
+
+
+
+
