@@ -1557,12 +1557,23 @@ list19 = ['ppp','qqq','rrr','sss','ttt']
 list20 = ['uuu','vvv','www','xxx','yyy']
 list21 = ['zzz','aaaa','…']
 
-
  # 原始数据 将所有 list 加入list_all1中  
 list_all1 = list2+list3
 list_all2 = []                  # itertools函数，变成len(list1)个数量个list
 list_final = []                  # 把所有list拆开，统一放进一个list中
 
+for i in range(1,len(list_all1)+1):
+    iter = itertools.permutations(list_all1,2)  #最后的3， 代表每次从'abcd'中挑选两个元素，比如ab, bc, ...
+    list_all2.append(list(iter))
+
+for x in list_all2:
+    for y in x:
+        list_final.append(y)
+# 结果很理想 :  a, b,c,ab,ac,abc,ba,...,cba
+# 缺点：abc, 和 cba；也许这是好事儿，因为筛选规则中，先滤掉a和先滤掉c的结果可能不一样的；
+for mm in list_final:
+    print " --- %s  %s "%(mm[0],mm[1])
+# 5秒出len(list_final)  ， 但如果print全部数据的话很慢-N分钟
 
 
 
