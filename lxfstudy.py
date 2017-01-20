@@ -1574,9 +1574,7 @@ for x in list_all2:
 for mm in list_final:
     print " --- %s  %s "%(mm[0],mm[1])
 # 5秒出len(list_final)  ， 但如果print全部数据的话很慢-N分钟
-
-
-
+s
 
 
 
