@@ -1,0 +1,7 @@
+要安装或升级pip，需要下载 get-pip.py. 地址：https://bootstrap.pypa.io/get-pip.py
+然后运行以下命令 (需要管理员权限):
+$ python get-pip.py
+
+
+
+
