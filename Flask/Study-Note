@@ -28,11 +28,13 @@
           return 'Hello World    !!!!!!!!!!!!!!'
 
 
-变量规则 - 类似 blog，每人一个url
+四、变量规则 - 类似 blog，每人一个url
   @app.route('/user/<username>')
   def show_user_profile(username):
           return 'User %s xxxxxxxxx' %username
   
+  IE访问  http://192.168.97.232:5000/user/【变量:lixuefei】
+  页面就会变为 User lixuefei xxxxxxxxx
   
 
 
