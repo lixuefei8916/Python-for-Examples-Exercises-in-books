@@ -14,9 +14,6 @@
   打开调试模式，那么服务器会在修改应用之后自动重启
   app.debug = True
   app.run()
-
-
-
-
-
+  
+  运行日志中会显示 Detected change in '/data/hello.py', reloading
 
