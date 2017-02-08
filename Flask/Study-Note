@@ -41,6 +41,11 @@
   def show_post(post_id):
           return 'Post %d' %post_id
           
+  IE访问http://192.168.97.232:5000/post/【变量：111】
+  页面就会变为 post 111
+  
+  
+  
 
 
 
