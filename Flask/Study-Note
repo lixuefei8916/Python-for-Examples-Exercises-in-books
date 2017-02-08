@@ -17,10 +17,12 @@
   运行日志中会显示 Detected change in '/data/hello.py', reloading
   
   【绝对不能在生产环境 中使用调试器 。】
-  
-
-
-
+ 
+ 
+ 三、路由
+   @app.route('/')
+   def index():
+          return 'Index Page !!!!!'
 
 
 
