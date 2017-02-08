@@ -36,6 +36,11 @@
   IE访问  http://192.168.97.232:5000/user/【变量:lixuefei】
   页面就会变为 User lixuefei xxxxxxxxx
   
+  用ID的方法访问
+  @app.route('/post/<int:post_id>')
+  def show_post(post_id):
+          return 'Post %d' %post_id
+          
 
 
 
