@@ -47,5 +47,8 @@
   
   
 五、唯一的URL；有/与无/的区别
+	@app.route('/projects/')
+	def projects():
+	        return 'The project page'
 
 
