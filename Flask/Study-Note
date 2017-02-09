@@ -65,6 +65,9 @@
 
 	@app.route('/login')
 	def login(): pass	
+
+	@app.route('/user/<username>')
+	def profile(username): pass
 	
 	
 	
