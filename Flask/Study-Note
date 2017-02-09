@@ -53,4 +53,5 @@
 	@app.route('/about')
 	def about():
 	        return 'The about page'
-
+	若访问 http://192.168.97.232:5000/projects   -- 可以访问（IE自动补/）
+	若访问 http://192.168.97.232:5000/projects/  -- 可以访问
