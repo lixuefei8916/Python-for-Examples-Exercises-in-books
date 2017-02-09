@@ -60,7 +60,11 @@
 	
 
 六、URL构建
-	
+	@app.route('/')
+	def index(): pass
+
+	@app.route('/login')
+	def login(): pass	
 	
 	
 	
