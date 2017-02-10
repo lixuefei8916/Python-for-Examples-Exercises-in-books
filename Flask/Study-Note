@@ -79,7 +79,9 @@
 		from flask import Flask,render_template
 		@app.route('/login',methods=['GET','POST'])
 		
-		
+		def login():
+		        if request.method == 'POST':
+		                do_the_login()		
 		
 		
 		
