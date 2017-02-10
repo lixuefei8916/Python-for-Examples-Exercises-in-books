@@ -94,7 +94,9 @@
 		def hello(name=None):
 		    return render_template('hello.html', name=name)		
 		
-		
+	[templates/hello.html --  Jinja2 模板]
+		<!doctype html>
+		<title>Hello from Flask</title>		
 		
 		
 		
