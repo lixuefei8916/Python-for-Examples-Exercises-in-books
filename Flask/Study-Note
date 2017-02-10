@@ -87,7 +87,9 @@
 		
 		
 八、渲染模板		
-		
+	[run.py]
+		from flask import render_template
+		@app.route('/hello/')		
 		
 		
 		
