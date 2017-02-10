@@ -74,5 +74,6 @@
 	        print url_for('login')
 	        print url_for('login',next='/')
 	        print url_for('profile',username='xuefei.li')	
-	
+		
+七、HTTP方法
 	
