@@ -76,4 +76,26 @@
 	        print url_for('profile',username='xuefei.li')	
 		
 七、HTTP方法
-	
+		from flask import Flask,render_template
+		@app.route('/login',methods=['GET','POST'])
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
