@@ -115,7 +115,9 @@
 
 	请求对象
 		详情参见 request 
-		
+		from flask import Flask,request
+		app = Flask(__name__)
+		@app.route('/login',methods=['POST','GET'])		
 		
 		
 		
