@@ -135,6 +135,15 @@
 		HTML 表单中设置 enctype="multipart/form-data" 属性
 		通过请求对象 files 属性来访问上传的文件。每个上传的文件都储存在这个 字典型属性中。
 		另外多出一个 用于把上传文件保存到服务器的文件系统中的 save() 方法
+		from flask import Flask,request
+		app = Flask(__name__)		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
