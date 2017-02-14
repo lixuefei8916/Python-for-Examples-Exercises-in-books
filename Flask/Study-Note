@@ -138,7 +138,11 @@
 		from flask import Flask,request
 		app = Flask(__name__)		
 		@app.route('/upload',methods=['GET','POST'])		
-		
+		def upload_file():
+		        if request.method == 'POST':
+		                f = request.files['the_file']
+		                f.save('/data/flask_file/uploaded_file.txt')
+	
 		
 		
 		
