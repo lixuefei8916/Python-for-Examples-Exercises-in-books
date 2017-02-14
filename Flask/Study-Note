@@ -137,7 +137,7 @@
 		另外多出一个 用于把上传文件保存到服务器的文件系统中的 save() 方法
 		from flask import Flask,request
 		app = Flask(__name__)		
-		
+		@app.route('/upload',methods=['GET','POST'])		
 		
 		
 		
