@@ -148,7 +148,8 @@
 			
 		如果想要把客户端的文件名作为服务器上的文件名， 可以通过 Werkzeug 提供的 secure_filename() 函数:
 		可以使用 filename 属性，值是 可以伪造的，永远不要信任这个值。
-		
+		from flask import Flask,request
+		form werkzeug import secure_filename		
 		
 		
 		
