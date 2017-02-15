@@ -150,7 +150,8 @@
 		可以使用 filename 属性，值是 可以伪造的，永远不要信任这个值。
 		from flask import Flask,request
 		form werkzeug import secure_filename		
-		
+		app = Flask(__name__)
+		@app.route('/upload',methods=['GET','POST'])		
 		
 		
 		
