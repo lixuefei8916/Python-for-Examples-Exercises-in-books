@@ -159,6 +159,9 @@
 		if __name__ == '__main__':
 		        app.debug = True
 		        app.run(host='0.0.0.0',port=5000)
+
+	Cookies
+		 在 Flask 中，如果能够使用 会话 ，那么就不要直接使用 cookies ，因为 会话比较安全一些。
 		
 		
 		
