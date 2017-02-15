@@ -162,6 +162,11 @@
 
 	Cookies
 		 在 Flask 中，如果能够使用 会话 ，那么就不要直接使用 cookies ，因为 会话比较安全一些。
+		读取Cookies
+		@app.route('/')
+		def index():
+		        username = requests.cookies.get('username')
+    	# 使用 cookies.get(key) 来代替 cookies[key] ，以避免当 cookie 不存在时引发 KeyError 。
 		
 		
 		
