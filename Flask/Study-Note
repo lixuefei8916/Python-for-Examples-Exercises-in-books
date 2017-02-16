@@ -203,6 +203,9 @@
 
 十一、关于响应
 	@app.errorhandler(404)
+	def not_found(error):
+	    return render_template('error.html'), 404
+	可以使用 make_response() 包裹返回表达式，获得响应对象，并对该对象 进行修改，然后再返回：
 
 
 
