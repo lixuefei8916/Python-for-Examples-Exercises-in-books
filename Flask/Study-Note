@@ -191,4 +191,8 @@
 		        abort(401)
 		        this_is_never_executed()
 		
+		# 自定义错误页面；
+		@app.errorhandler(401)
+		def page_not_found(error):
+		        return render_template('page_not_found.html'),401
 		
