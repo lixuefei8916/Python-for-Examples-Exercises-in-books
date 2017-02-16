@@ -179,6 +179,11 @@
 	也可以改变错误代码 400，404，200等		
 		from flask import abort,redirect,url_for
 		from flask import Flask		
-		
+
+		app = Flask(__name__)
+
+		@app.route('/')
+		def index():
+		        return redirect(url_for('login'))		
 		
 		
