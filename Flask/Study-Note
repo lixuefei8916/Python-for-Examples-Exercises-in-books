@@ -177,7 +177,8 @@
 十、重定向和错误
 	使用 redirect() 函数可以重定向。使用 abort() 可以更早 退出请求，并返回错误代码401:
 	也可以改变错误代码 400，404，200等		
-		
+		from flask import abort,redirect,url_for
+		from flask import Flask		
 		
 		
 		
