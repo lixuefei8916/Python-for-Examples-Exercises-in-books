@@ -236,6 +236,14 @@
 		                        <p><input type=submit value=Login>
 		                </form>
 		        '''
+		@app.route('/logout')
+		def logout():
+		        session.pop('username',None)
+		        return redirect(url_for('index'))
+		app.secret_key = 'A0Z'
+		if __name__ == '__main__':
+		        app.debug = True
+		        app.run(host='0.0.0.0',port=5000)
 	
 
 
