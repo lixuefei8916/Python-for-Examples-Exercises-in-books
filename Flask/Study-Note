@@ -257,7 +257,11 @@
             <p><input type=submit value=xxx>
             类型=submit ； 按钮名称=xxx
         </form>	
-
+	
+十三、日志
+	app.logger.debug('A value for debugging')
+	app.logger.warning('A warning occurred (%d apples)', 42)
+	app.logger.error('An error occurred')	
 
 
 
