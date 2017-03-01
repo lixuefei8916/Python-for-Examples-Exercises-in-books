@@ -246,6 +246,10 @@
 		        app.run(host='0.0.0.0',port=5000)
 	
 
+	[输入框]
+	    <form action="" method="post">
+            <p><input type=text name=username>
+        </form>	
 
 
 
