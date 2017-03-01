@@ -251,7 +251,12 @@
             <p><input type=text name=username>
         </form>	
 
-
+	[按钮]21563+
+	
+	    <form action="" method="post">
+            <p><input type=submit value=xxx>
+            类型=submit ； 按钮名称=xxx
+        </form>	
 
 
 
