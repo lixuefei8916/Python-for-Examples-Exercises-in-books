@@ -271,7 +271,9 @@
 14. 输入帐号（1个参数）：第一次是GET， 输入字段，然后POST回显
 	@app.route('/eyou',methods=['GET','POST'])
 	def eyou():
-
+	        if request.method == 'POST':
+	                session['eyouname'] = request.form['eyouname']
+	                return 'xxxx eyouname == %s' %escape(session['eyouname'])
 
 
 
