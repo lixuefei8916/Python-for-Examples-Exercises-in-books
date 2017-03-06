@@ -275,6 +275,9 @@
 	                session['eyouname'] = request.form['eyouname']
 	                return 'xxxx eyouname == %s' %escape(session['eyouname'])
 
+	        return '''
+	                <form action="" method="post">
+	                        <p>Hi lixuefei!
 
 
 
