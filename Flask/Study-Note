@@ -280,7 +280,10 @@
 	                        <p>Hi lixuefei!
 	                        <p>  
 	                        <p>Please input eyouname
-
+	                        <p><input type=text name=eyouname>
+	                        <p><input type=submit value=xxx>
+	                </form>
+	        '''
 
 
 
