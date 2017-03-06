@@ -284,6 +284,10 @@
 	                        <p><input type=submit value=xxx>
 	                </form>
 	        '''
+	app.secret_key = 'A0Z'
+
+	假如 session['这里有错误'] = request.form['eyouname']，那么eyouname永远是上一次成功的value
+	加入 app.secret_key = 错误； 会报错
 
 
 
