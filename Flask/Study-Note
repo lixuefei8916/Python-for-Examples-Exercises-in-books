@@ -291,6 +291,8 @@
 
 
 
+15. 输入1个参数，然后print
+	@app.route('/lxf',methods=['GET'])
 
 
 
