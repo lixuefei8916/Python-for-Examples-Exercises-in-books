@@ -304,4 +304,33 @@
 
 	@app.route('/lxf',methods=['POST'])
 	def get_sn():
+	        filename = request.form['filename']
+	        return filename
 
+	app.secret_key = 'A0Z'
+
+
+	if __name__ == '__main__':
+	        app.debug = True
+	        app.run(host='0.0.0.0',port=5000)		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
