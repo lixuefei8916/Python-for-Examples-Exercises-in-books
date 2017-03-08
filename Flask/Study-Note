@@ -324,6 +324,17 @@
 	                session['y'] = request.form['y']
 	                z = session['x'] + session['y']
 	                return 'x=%s,y=%s, x+y=%s' %(escape(session['x']),escape(session['y']),z)
+
+	        return '''
+	                <form action="" method="post">
+	                        <p>Hi lixuefei!
+	                        <p>  
+	                        <p>Please input eyouname
+	                        <p><input type=text name=x>
+	                        <p><input type=text name=y>
+	                        <p><input type=submit value=xxx>
+	                </form>
+	        '''
 		
 		
 		
