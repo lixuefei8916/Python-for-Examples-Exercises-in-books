@@ -319,6 +319,11 @@
 	注：一定两个 session['xxx']		
 	app.route('/eyou',methods=['GET','POST'])
 	def eyou():		
+	        if request.method == 'POST':
+	                session['x'] = request.form['x']
+	                session['y'] = request.form['y']
+	                z = session['x'] + session['y']
+	                return 'x=%s,y=%s, x+y=%s' %(escape(session['x']),escape(session['y']),z)
 		
 		
 		
