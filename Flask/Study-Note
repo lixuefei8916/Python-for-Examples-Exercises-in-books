@@ -315,7 +315,8 @@
 	        app.run(host='0.0.0.0',port=5000)		
 		
 		
-		
+16. 输入x和y（2个参数）：第一次是GET， 输入x y，然后POST回显x和y
+	注：一定两个 session['xxx']		
 		
 		
 		
