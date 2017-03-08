@@ -317,7 +317,8 @@
 		
 16. 输入x和y（2个参数）：第一次是GET， 输入x y，然后POST回显x和y
 	注：一定两个 session['xxx']		
-		
+	app.route('/eyou',methods=['GET','POST'])
+	def eyou():		
 		
 		
 		
