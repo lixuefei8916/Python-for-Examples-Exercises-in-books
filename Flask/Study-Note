@@ -349,7 +349,9 @@
 		                z = int(x)+int(y)
 		                return render_template('16.html',RESULT=int(z))
 		        return render_template('16.html')		
-		
+		if __name__ == '__main__':
+		        app.debug = True
+		        app.run(host='0.0.0.0',port=5000)		
 		
 		
 		
