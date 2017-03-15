@@ -346,7 +346,9 @@
 		        if request.method == 'POST':
 		                x = request.form['x']
 		                y = request.form['y']
-		
+		                z = int(x)+int(y)
+		                return render_template('16.html',RESULT=int(z))
+		        return render_template('16.html')		
 		
 		
 		
