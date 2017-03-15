@@ -343,6 +343,9 @@
 		app = Flask(__name__)		
 		@app.route('/eyou',methods=['GET','POST'])
 		def eyou():		
+		        if request.method == 'POST':
+		                x = request.form['x']
+		                y = request.form['y']
 		
 		
 		
