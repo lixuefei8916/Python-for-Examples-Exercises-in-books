@@ -341,7 +341,8 @@
 	[lxf.py]
 		from flask import Flask,render_template,redirect,url_for,escape,request
 		app = Flask(__name__)		
-		
+		@app.route('/eyou',methods=['GET','POST'])
+		def eyou():		
 		
 		
 		
