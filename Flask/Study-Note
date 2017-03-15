@@ -338,7 +338,9 @@
 		
 
 17. 简单加法-计算器（同网页下显示，不跳转）		
-		
+	[lxf.py]
+		from flask import Flask,render_template,redirect,url_for,escape,request
+		app = Flask(__name__)		
 		
 		
 		
