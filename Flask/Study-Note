@@ -354,8 +354,10 @@
 		        app.run(host='0.0.0.0',port=5000)		
 		
 
-	[17.html]		
-		
+    [17.html]		
+    <body>
+        <div align="center" style="margin-top:30px">
+            <form method="POST" name = "form1">		
 		
 		
 		
